@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6X93O2+TnC9B25Xcxr6a8pyf8+3c03i4w2mdS6wBl6vQ7dWg8frw9eJni6" crossorigin="anonymous">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #333;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 25px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      color: #ff5e5e;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: #212121;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn,
+    .hero .download-btn {
+      background-color: #ff5e5e;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      color: white;
+      text-transform: uppercase;
+      margin-top: 15px;
+    }
+
+    .hero .btn:hover,
+    .hero .download-btn:hover {
+      background-color: #e04e4e;
+    }
+
+    /* About Section */
+    #about {
+      height: 100vh;
+      background-color: #1c1c1c;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #about h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.2em;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Skills Section */
+    #skills {
+      height: 100vh;
+      background-color: #333;
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    #skills h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    #skills ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    #skills ul li {
+      background-color: #444;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      min-width: 150px;
+    }
+
+    /* Contact Section */
+    #contact {
+      height: 100vh;
+      background-color: #212121;
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #contact form label {
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+
+    #contact form input,
+    #contact form textarea {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 1.1em;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    #contact form button {
+      background-color: #ff5e5e;
+      color: white;
+      padding: 14px 25px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #contact form button:hover {
+      background-color: #e04e4e;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul class="d-flex justify-content-center">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Your future web developer</p>
+    <a href="#contact" class="btn">Contact Me</a>
+    <button class="download-btn" onclick="downloadResume()">Download My Resume</button>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with experience in creating dynamic and responsive websites. I love to solve problems with creative coding solutions.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul class="d-flex flex-wrap justify-content-center">
+      <li class="p-3">HTML</li>
+      <li class="p-3">CSS</li>
+      <li class="p-3">JavaScript</li>
+      <li class="p-3">React</li>
+      <li class="p-3">Node.js</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <!-- Bootstrap JS (for mobile navbar toggle and functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka9Ak7ANtmTi5CwDpQbIuQ8lmyZgMZyH5sDhftfgkEgZXkfh0Fbb/fawF3dmR93" crossorigin="anonymous"></script>
+
+  <script>
+    // Function to download the resume
+    function downloadResume() {
+      const link = document.createElement('a');
+      link.href = 'path-to-your-resume.pdf'; // Replace with the actual path to your PDF file
+      link.download = 'My_Resume.pdf'; // Specify the name of the downloaded file
+      link.click();
+    }
+
+    // Simple contact form submission simulation (You can replace with actual functionality later)
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      // Simulate form submission
+      alert("Thank you for contacting me! I'll get back to you soon.");
+      
+      // Reset form
+      event.target.reset();
+    });
+  </script>
+
+</body>
+</html>
